@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Consolas', monospace;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
+    background-color: #181d27;
+    color: #c1cad2;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #0e1117;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.header, .footer {
+    text-align: center;
+    padding: 10px;
+    background: #0c4b33;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+.content .main, .content .sidebar {
+    padding: 20px;
+}
+
+.content .main {
+    flex: 4;
+}
+
+.content .sidebar {
+    flex: 1;
+}
+
+.post-content span {
+    color: #4caf50;
+    font-weight: 1000;
+}
+
+h2, h3 {
+    color: #4a90e2;
+}
+
+h1 span {
+    font-size: xxx-large;
+    font-weight: bolder;
+    color: #4caf50;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #c1cad2;
+}
+
+p, li {
+    line-height: 1.6;
+    margin: 0 0 10px;
+}
+
+.post-item {
+    background: black;
+    padding: 10px;
+    border-right: 1px solid #4caf50;
+    border-left: 5px solid #4caf50;
+    margin-bottom: 15px;
+}
+
+.sidebar-item {
+    padding: 10px;
+    background: #181d27;
+    border: 1px solid #4caf50;
+    border-radius: 4px;
+    margin-top: 55px;
+}
+
+.sidebar-item a {
+    font-weight: bold;
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.sidebar-item h3, .post-item h3 {
+    margin-top: 0;
+}
+
+a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: none;
+    border-bottom: 2px solid #4a90e2;
+    margin: 20px 0;
+}
+
+pre {
+    background-color: #0e1117;
+    border: 1px solid #c1cad2;
+    border-radius: 6px;
+    padding: 16px;
+    overflow: auto;
+    color: #4caf50;
+}
+
+/* code {
+    background-color: #f6f8fa;
+    border-radius: 3px;
+    font-size: 85%;
+    margin: 0;
+    padding: 0.2em 0.4em;
+} */
+
+/* Style blockquotes */
+blockquote {
+    border-left: 4px solid #000000;
+    padding-left: 1em;
+    color: #666;
+    margin: 1em 0;
+}

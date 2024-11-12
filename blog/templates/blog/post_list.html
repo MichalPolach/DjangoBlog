@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <article class="post-item">
+            <time class="date">
+                {{ post.published_date|date:"F d, Y" }}
+            </time>
+            <h2><a href="{% url 'post_detail' slug=post.slug %}">{{ post.title }}</a></h2>
+            <div class="post-content">
+                <p><span>>_ </span>{{ post.get_content_preview|linebreaksbr }}</p>
+                {% if post.content|length > 300 %}
+                    <a href="{% url 'post_detail' slug=post.slug %}">Read more...</a>
+                {% endif %}
+            </div>
+        </article>
+        <hr>
+    {% empty %}
+        <p>No posts available.</p>
+    {% endfor %}
+{% endblock %}

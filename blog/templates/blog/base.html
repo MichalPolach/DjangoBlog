@@ -1,0 +1,57 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <title>{% block title %}Prokrastinarium{% endblock %}</title>
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <h1><span>< </span>Prokrastinarium<span> ></span></h1>
+            <p>Procrastinating Efficiently since I have been born</p>
+        </header>
+
+        <div class="content">
+            <main class="main">
+                {% block content %}
+                {% endblock %}
+            </main>
+            {% if request.path == '/' %}
+            <aside class="sidebar">
+                <div class="sidebar-item">
+                    <h3>Fancy Archive</h3>
+            
+                    <!-- Yearly Archive Links -->
+                    <h4>Yearly</h4>
+                    <ul>
+                        {% for year in years %}
+                            <li><a href="{% url 'post_list_year' year.year %}">{{ year.year }}</a></li>
+                        {% endfor %}
+                    </ul>
+            
+                    <!-- Monthly Archive Links -->
+                    <h4>Monthly</h4>
+                    <ul>
+                        {% for month in months %}
+                            <li><a href="{% url 'post_list_month' month.year month.month %}">
+                                {{ month|date:"F Y" }}
+                            </a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </aside>    
+            {% endif %}        
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2023 Michal Polach</p>
+        </footer>
+    </div>
+
+</body>
+</html>
