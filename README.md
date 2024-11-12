@@ -23,8 +23,8 @@
 
 1. Clone this bad boy:
 ```bash
-git clone https://github.com/yourusername/turbotux-blog.git
-cd turbotux-blog
+git clone https://github.com/MichalPolach/DjangoBlog.git
+cd DjangoBlog
 ```
 
 2. Set up your virtual environment (because we're responsible developers):
