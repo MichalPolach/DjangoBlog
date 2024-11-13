@@ -55,6 +55,10 @@ python manage.py runserver
 
 7. Visit `http://localhost:8000` and bask in the glory of your new blog!
 
+8. After fidling with the code and unhealthy amount of frustration, you can proceed to deployment!
+- I recommend gunicorn and nginx (because that's what I use).
+
+
 ## 🎨 Customization
 
 Want to make it your own? Go wild! Here are some things you can do:
@@ -100,9 +104,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Stack Overflow - For copying... I mean, learning
 - The Django community - For making web development fun again
 - My rubber duck - For debugging assistance
-
----
-
-Made with ❤️ and excessive amounts of caffeine by [Your Name]
-
-Remember: With great blog comes great responsibility!
